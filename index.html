@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primaryColor: '#B4F461',
+                        secondColor: '#111111',
+                        thirdColor: 'rgba(17, 17, 17, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="lexend-font">
+    <header class="bg-[#F9F7F3]">
+        <nav class="max-w-[1140px] mx-auto flex justify-between items-center md:p-6 p-4 md:pb-10">
+            <div>
+                <button class="font-semibold md:text-xl text-base text-secondColor bg-primaryColor md:px-8 px-6 md:py-3 py-2 shadow-none rounded-lg">Blog</button>
+            </div>
+            <div class="flex justify-center items-center md:gap-4 gap-3">
+                <img src="./assets/logo.png" alt="logo">
+                <h4 class="hidden md:inline text-secondColor font-semibold md:text-xl text-base">Donate Bangladesh</h4>
+            </div>
+            <div class="flex justify-center items-center md:gap-3 gap-2">
+                <img src="./assets/coin.png" alt="">
+                <h4 class="hidden md:inline text-thirdColor font-semibold md:text-xl text-base">5500 BDT</h4>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+</body>
+
+</html>
