@@ -1,5 +1,22 @@
-// Donate for Flood at Noakhali, Bangladesh //
 
+
+// History Button Function //
+const historyButton = document.getElementById('history-button')
+const donationButton = document.getElementById('donation-button')
+
+historyButton.addEventListener('click', function(){
+
+    historyButton.classList.remove('text-thirdColor', 'border')
+    historyButton.classList.add('bg-primaryColor', 'font-semibold', 'text-secondColor')
+
+    donationButton.classList.remove('text-secondColor', 'bg-primaryColor', 'font-semibold')
+    donationButton.classList.add('text-thirdColor', 'border')
+})
+
+
+
+
+// Donate for Flood at Noakhali, Bangladesh //
 
 const donateButton = document.getElementById('donate-button').addEventListener('click', function(){
     
@@ -21,13 +38,10 @@ const donateButton = document.getElementById('donate-button').addEventListener('
 
         const currentBalance = myBalance - donateInput;
         document.getElementById('my-balance').innerText = currentBalance;
-        // console.log(donateInput, donatedAmount, totalDonate, myBalance, currentBalance)
- 
     }
     else{
         alert('invalid Input')
-    }
-    
+    }  
 });
 
 
@@ -53,12 +67,10 @@ const donateButton2 = document.getElementById('donate-for-feni-btn').addEventLis
 
         const currentBalance2 = myBalance - donateInput2;
         document.getElementById('my-balance').innerText = currentBalance2;
-
-        console.log(donatedAmount2, donateInput2, totalDonate2, currentBalance2)
     }
-
-    
 })
+
+// Aid for Injured in the Quota Movement //
 
 const donateButton3 = document.getElementById('donate-for-student-btn').addEventListener('click', function(){
 
@@ -67,6 +79,7 @@ const donateButton3 = document.getElementById('donate-for-student-btn').addEvent
     const myBalance = getInputTextById('my-balance');
 
     if(isNaN(donateInput3) || donateInput3 <=0){
+        alert("Don't mock with us")
         return("Don't mock with us")
     }
     else{
@@ -82,6 +95,4 @@ const donateButton3 = document.getElementById('donate-for-student-btn').addEvent
             document.getElementById('my-balance').innerText = currentBalance3;
         }
     }
-
-    // console.log(donateInput3, donatedAmount3, myBalance)
 })

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primaryColor: '#B4F461',
+                        secondColor: '#111111',
+                        thirdColor: 'rgba(17, 17, 17, 0.7)',
+                        fourthColor: 'rgba(17, 17, 17, 0.3)',
+                        fifthColor: 'rgba(17, 17, 17, 0.05)',
+                        lastColor: 'rgba(17, 17, 17, 0.1)',
+                        blurBg: 'opacity-60'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="lexend-font">
+    <!-- Navigation bar -->
+    <header class="bg-[#F9F7F3] sticky top-0 z-40 backdrop-blur-md bg-opacity-60">
+        <nav class="">
+
+            <div class="max-w-[1140px] mx-auto flex justify-between items-center md:py-6 py-4">
+                <div>
+                    <a href="index.html"><button
+                        class="font-semibold md:text-xl text-base text-secondColor bg-primaryColor md:px-8 px-6 md:py-3 py-2 shadow-none rounded-lg">Home</button></a>
+                </div>
+                <div class="flex justify-center items-center md:gap-4 gap-3">
+                    <img src="./assets/logo.png" alt="logo">
+                    <h4 class="hidden md:inline text-secondColor font-semibold md:text-xl text-base">Donate Bangladesh
+                    </h4>
+                </div>
+                <div class="flex justify-center items-center md:gap-3 gap-2">
+                    <img src="./assets/coin.png" alt="">
+                    <h4 class="md:inline text-thirdColor font-semibold md:text-xl text-base"><span
+                            id="my-balance">5500</span> BDT</h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-[1140px] mx-auto md:my-20 my-10">
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the document object model (DOM)</div>
+              <div class="collapse-content">
+                <p>Document Object Model. It represents the page so that programs can change the document structure, style, and content</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select an element from the dom</div>
+              <div class="collapse-content">
+                <p>I select an element from DOM by getElementById or querySelector.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the dom, and why is it useful?</div>
+              <div class="collapse-content">
+                <p>The process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated</p>
+              </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styles using the dom?</div>
+              <div class="collapse-content">
+                <p>By setAttribute() method</p>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="utilities.js"></script>
+    <script src="history.js"></script>
+</body>
+
+</html>
