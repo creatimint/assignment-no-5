@@ -1,6 +1,5 @@
 // Donate for Flood at Noakhali, Bangladesh //
 
-// const myBalance = getInputTextById('my-balance')
 
 const donateButton = document.getElementById('donate-button').addEventListener('click', function(){
     
@@ -59,4 +58,30 @@ const donateButton2 = document.getElementById('donate-for-feni-btn').addEventLis
     }
 
     
+})
+
+const donateButton3 = document.getElementById('donate-for-student-btn').addEventListener('click', function(){
+
+    const donateInput3 = getInputAmountById('donate-for-student-input');
+    const donatedAmount3 = getInputTextById('donated-amount3');
+    const myBalance = getInputTextById('my-balance');
+
+    if(isNaN(donateInput3) || donateInput3 <=0){
+        return("Don't mock with us")
+    }
+    else{
+        if(myBalance < donateInput3){
+            alert('Not enough balance')
+            return ("Not Enough Money")
+        }
+        else{
+            const totalBalance3 = donateInput3 + donatedAmount3;
+            document.getElementById('donated-amount3').innerText = totalBalance3;
+
+            const currentBalance3 =  myBalance - donateInput3;
+            document.getElementById('my-balance').innerText = currentBalance3;
+        }
+    }
+
+    // console.log(donateInput3, donatedAmount3, myBalance)
 })
