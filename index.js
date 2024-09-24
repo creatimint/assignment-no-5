@@ -1,8 +1,8 @@
 
-
-// History Button Function //
 const historyButton = document.getElementById('history-button')
 const donationButton = document.getElementById('donation-button')
+
+// History Button Function //
 
 historyButton.addEventListener('click', function(){
 
@@ -12,8 +12,34 @@ historyButton.addEventListener('click', function(){
     donationButton.classList.remove('text-secondColor', 'bg-primaryColor', 'font-semibold')
     donationButton.classList.add('text-thirdColor', 'border')
 })
+// Donation Button Function //
+
+donationButton.addEventListener('click', function(){
+    donationButton.classList.remove('text-thirdColor', 'border')
+    donationButton.classList.add('bg-primaryColor', 'font-semibold', 'text-secondColor')
+
+    historyButton.classList.remove('text-secondColor', 'bg-primaryColor', 'font-semibold')
+    historyButton.classList.add('text-thirdColor', 'border')
+})
 
 
+document.getElementById('history-button').addEventListener('click', function(){
+    showSectionById('history-container');
+})
+
+document.getElementById('donation-button').addEventListener('click', function(){
+    showSectionById('card-container')
+})
+
+
+// History section //
+const historyContainer = document.getElementById('history-container');
+const currentTime = new Date().toString();
+
+// history log//
+
+const historyItem = document.createElement('div');
+historyItem.className = 'w-full border border-lastColor md:p-8 p-4 rounded-2xl';
 
 
 // Donate for Flood at Noakhali, Bangladesh //
@@ -41,7 +67,19 @@ const donateButton = document.getElementById('donate-button').addEventListener('
     }
     else{
         alert('invalid Input')
-    }  
+    } 
+
+    // history log //
+
+    historyItem.innerHTML = `
+        <h3 class="text-xl text-secondColor font-bold">${donateInput} Taka is Donated for Flood at Noakhali, Bangladesh</h3>
+        <p class="text-thirdColor">Date: ${currentTime}</p>
+    `
+    const historyContainer = document.getElementById('history-container');
+    historyContainer.append(historyItem);
+    console.log(historyItem)
+    
+
 });
 
 
@@ -96,3 +134,15 @@ const donateButton3 = document.getElementById('donate-for-student-btn').addEvent
         }
     }
 })
+
+
+// history list //
+
+// const historyItem = document.createElement('div');
+// historyItem.className = 'w-full border border-lastColor md:p-8 p-4';
+
+// historyItem.innerHTML = `
+//     <h3>Taka is Donated for</h3>
+// `
+// const historyContainer = document.getElementById('history-container');
+// historyContainer.appendChild(historyItem);

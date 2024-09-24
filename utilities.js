@@ -8,3 +8,12 @@ function getInputTextById(id){
     return inputText;
 }
 
+function showSectionById(id){
+    // hide all section //
+    document.getElementById('card-container').classList.add('hidden');
+    document.getElementById('history-container').classList.add('hidden');
+
+    // show section by given parameter // 
+    document.getElementById(id).classList.remove('hidden')
+}
+
