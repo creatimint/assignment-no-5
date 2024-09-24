@@ -64,10 +64,14 @@ const donateButton = document.getElementById('donate-button').addEventListener('
 
         const currentBalance = myBalance - donateInput;
         document.getElementById('my-balance').innerText = currentBalance;
+
+        const modal = document.getElementById('modal');
+        modal.showModal()
     }
     else {
         alert('invalid Input')
     }
+
 
     // history log //
     const historyItem = document.createElement('div');
@@ -110,6 +114,9 @@ const donateButton2 = document.getElementById('donate-for-feni-btn').addEventLis
 
         const currentBalance2 = myBalance - donateInput2;
         document.getElementById('my-balance').innerText = currentBalance2;
+
+        const modal = document.getElementById('modal');
+        modal.showModal()
     }
 
     // history log //
@@ -154,6 +161,8 @@ const donateButton3 = document.getElementById('donate-for-student-btn').addEvent
             const currentBalance3 = myBalance - donateInput3;
             document.getElementById('my-balance').innerText = currentBalance3;
         }
+        const modal = document.getElementById('modal');
+        modal.showModal()
     }
 
     // history log //
