@@ -7,3 +7,4 @@ function getInputTextById(id){
     const inputText = parseFloat(document.getElementById(id).innerText);
     return inputText;
 }
+

@@ -1,3 +1,6 @@
+// Donate for Flood at Noakhali, Bangladesh //
+
+// const myBalance = getInputTextById('my-balance')
 
 const donateButton = document.getElementById('donate-button').addEventListener('click', function(){
     
@@ -6,22 +9,21 @@ const donateButton = document.getElementById('donate-button').addEventListener('
     const myBalance = getInputTextById('my-balance')
     
     if(isNaN(donateInput) || donateInput <= 0){
-        alert('invalid Input')
+        alert("Don't mock with us")
     }
     else if(!isNaN(donateInput)){
 
         if(myBalance < donateInput){
             alert('Not Enough Balance')
-            return ("You don't have enough money");
+            return ('');
         }
         const totalDonate = donatedAmount + donateInput;
         document.getElementById('donated-amount').innerText = totalDonate;
 
         const currentBalance = myBalance - donateInput;
         document.getElementById('my-balance').innerText = currentBalance;
-        console.log(donateInput, donatedAmount, totalDonate, myBalance, currentBalance)
-
-        
+        // console.log(donateInput, donatedAmount, totalDonate, myBalance, currentBalance)
+ 
     }
     else{
         alert('invalid Input')
@@ -29,3 +31,32 @@ const donateButton = document.getElementById('donate-button').addEventListener('
     
 });
 
+
+// Donate for Flood Relief in Feni,Bangladesh //
+
+const donateButton2 = document.getElementById('donate-for-feni-btn').addEventListener('click', function(){
+
+    const donateInput2 = getInputAmountById('donate-for-feni-input');
+    const donatedAmount2 = getInputTextById('donated-amount2');
+    const myBalance = getInputTextById('my-balance')
+    
+    if(isNaN(donateInput2) || donateInput2 <=0){
+        alert("Don't mock with us")
+        return ("404 Error")
+    }
+    else if(!isNaN(donateInput2)){
+        if(myBalance < donateInput2){
+            alert('Not Enough Balance')
+            return("You don't have enough money");
+        }
+        const totalDonate2 = donateInput2 + donatedAmount2;
+        document.getElementById('donated-amount2').innerText = totalDonate2;
+
+        const currentBalance2 = myBalance - donateInput2;
+        document.getElementById('my-balance').innerText = currentBalance2;
+
+        console.log(donatedAmount2, donateInput2, totalDonate2, currentBalance2)
+    }
+
+    
+})
